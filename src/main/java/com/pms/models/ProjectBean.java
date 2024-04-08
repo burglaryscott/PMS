@@ -12,9 +12,9 @@ import java.time.LocalDate;
 
 @Entity
 public class ProjectBean {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @NotBlank(message = "Name is required")
     @Size(max = 255, message = "Name cannot exceed 255 characters")
@@ -28,58 +28,55 @@ public class ProjectBean {
 
     @NotNull(message = "End date is required")
     private LocalDate endDate;
-	
-	public ProjectBean() {
-	
-	}
 
-	public ProjectBean(Long id, String name, String description, LocalDate startDate, LocalDate endDate) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.description = description;
-		this.startDate = startDate;
-		this.endDate = endDate;
-	}
+    public ProjectBean() {
+    }
 
-	public Long getId() {
-		return id;
-	}
+    public ProjectBean(Long id, String name, String description, LocalDate startDate, LocalDate endDate) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public LocalDate getStartDate() {
-		return startDate;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-	public void setStartDate(LocalDate startDate) {
-		this.startDate = startDate;
-	}
+    public LocalDate getStartDate() {
+        return startDate;
+    }
 
-	public LocalDate getEndDate() {
-		return endDate;
-	}
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
+    }
 
-	public void setEndDate(LocalDate endDate) {
-		this.endDate = endDate;
-	}
+    public LocalDate getEndDate() {
+        return endDate;
+    }
 
+    public void setEndDate(LocalDate endDate) {
+        this.endDate = endDate;
+    }
 }
